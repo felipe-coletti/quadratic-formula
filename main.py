@@ -20,7 +20,7 @@ numbers = clear(equation)
 
 # verifica se a equação é válida
 if len(numbers) < 3 or numbers[0] == 0 or numbers[1] == 0 or numbers[2] == 0:
-    print('Equação inválida. ')
+    print('Equação inválida.')
 else:
     # calulca a equação
     a = int(numbers[0])
@@ -52,5 +52,5 @@ else:
         else:
             print('\n-{} +- √{} / 2 . {}'.format(b, delta, a))
 
-        print('\nx1 = {:.0f}. '.format(x1))
-        print('x2 = {:.0f}. '.format(x2))
+        print('\nx1 = {:.0f}'.format(x1))
+        print('x2 = {:.0f}'.format(x2))
