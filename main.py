@@ -35,13 +35,13 @@ else:
     # exibe o resultado
     print('{}² - 4 . {} . {}'.format(b, a, c))
 
-    part = - 4 * a * c
+    secondPart = - 4 * a * c
 
-    if part < 0:
-        part *= - 1
-        print('{} - {}'.format(b**2, part))
+    if secondPart < 0:
+        secondPart *= - 1
+        print('{} - {}'.format(b**2, secondPart))
     else:
-        print('{} + {}'.format(b**2, part))
+        print('{} + {}'.format(b**2, secondPart))
 
     print(delta)
 
