@@ -1,6 +1,8 @@
+# solicita a equação de 2ºgrau que será calculada
 equation = input('Digite a equação de 2ºgrau: ')
 
 
+# remove os caracteres que não serão utilizados
 def clear(information):
     for i in range(len(information)):
         if not information[i].isnumeric() and information[i].isalpha() or information[i] == '²' or information[i] == '=':
@@ -13,11 +15,14 @@ def clear(information):
     return information
 
 
+# armazena os valores que serão utilizados
 numbers = clear(equation)
 
+# verifica se a equação é válida
 if len(numbers) < 3 or numbers[0] == 0 or numbers[1] == 0 or numbers[2] == 0:
     print('Equação inválida. ')
 else:
+    # calulca a equação
     a = int(numbers[0])
     b = int(numbers[1])
     c = int(numbers[2])
@@ -27,6 +32,7 @@ else:
     x1 = (-b + delta//2) / (2 * a)
     x2 = (-b - delta//2) / (2 * a)
 
+    # exibe o resultado
     print('{}² - 4 . {} . {}'.format(b, a, c))
 
     part = - 4 * a * c
