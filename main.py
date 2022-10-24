@@ -7,7 +7,7 @@ def clear(information):
     for i in range(len(information)):
         if not information[i].isnumeric() and information[i].isalpha() or information[i] == '²' or information[i] == '=':
             information = information.replace(information[i], '/')
-    if '//' in information:
+    while '//' in information:
         information = information.replace('//', '/')
 
     information = information.split('/')
