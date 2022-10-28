@@ -1,5 +1,3 @@
-from math import sqrt
-
 # solicita a equação de 2ºgrau que será calculada
 equation = input('Digite a equação de 2ºgrau: ')
 
