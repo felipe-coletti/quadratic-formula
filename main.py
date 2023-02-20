@@ -48,3 +48,5 @@ else:
 
         print('\nx1 = {:.0f}'.format(x1))
         print('x2 = {:.0f}'.format(x2))
+    else:
+        print('\nEssa equação não tem raízes reais.')
