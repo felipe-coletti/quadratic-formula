@@ -1,4 +1,4 @@
-equation = input('Digite a equação de 2ºgrau: ')
+equation = input('Digite uma equação de 2ºgrau: ')
 
 
 def clear(information):
@@ -49,4 +49,4 @@ else:
         print('\nx1 = {:.0f}'.format(x1))
         print('x2 = {:.0f}'.format(x2))
     else:
-        print('\nEssa equação não tem raízes reais.')
+        print('\nEssa equação não apresenta raízes reais.')
