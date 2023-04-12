@@ -32,7 +32,7 @@ else:
     secondPart = - 4 * a * c
 
     if secondPart < 0:
-        secondPart *= - 1
+        secondPart *= -1
         print('{} - {}'.format(b**2, secondPart))
     else:
         print('{} + {}'.format(b**2, secondPart))
@@ -41,7 +41,7 @@ else:
 
     if delta > 0:
         if b < 0:
-            b *= - 1
+            b *= -1
             print('\n{} +- √{} / 2 . {}'.format(b, delta, a))
         else:
             print('\n-{} +- √{} / 2 . {}'.format(b, delta, a))
