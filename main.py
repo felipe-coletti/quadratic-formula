@@ -42,9 +42,9 @@ else:
     if delta > 0:
         if b < 0:
             b *= -1
-            print('\n{} +- √{} / 2 . {}'.format(b, delta, a))
+            print('\n{} ± √{} / 2 . {}'.format(b, delta, a))
         else:
-            print('\n-{} +- √{} / 2 . {}'.format(b, delta, a))
+            print('\n-{} ± √{} / 2 . {}'.format(b, delta, a))
 
         print('\nx1 = {:.0f}'.format(x1))
         print('x2 = {:.0f}'.format(x2))
