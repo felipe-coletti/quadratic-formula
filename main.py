@@ -29,13 +29,14 @@ else:
 
     print('{}² - 4 . {} . {}'.format(b, a, c))
 
+    firstPart = b**2
     secondPart = - 4 * a * c
 
     if secondPart < 0:
         secondPart *= -1
-        print('{} - {}'.format(b**2, secondPart))
+        print('{} - {}'.format(firstPart, secondPart))
     else:
-        print('{} + {}'.format(b**2, secondPart))
+        print('{} + {}'.format(firstPart, secondPart))
 
     print(delta)
 
