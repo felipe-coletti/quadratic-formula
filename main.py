@@ -8,6 +8,8 @@ def clear(information):
     while '//' in information:
         information = information.replace('//', '/')
 
+    information = information.replace(' ', '')
+    
     information = information.split('/')
 
     return information
