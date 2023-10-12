@@ -23,7 +23,10 @@ def getValues(equation):
         if 'x²' in equation[i]:
             if len(result) > 0:
                 result += '/'
-            result += equation[i].replace('x²', '')
+            if len(equation[i].replace('x²', '')) == 0:
+                result += '1'
+            else:
+                result += equation[i].replace('x²', '')
             addedA = True
     
     if addedA == False:
@@ -35,7 +38,10 @@ def getValues(equation):
         if 'x' in equation[i] and not '²' in equation[i]:
             if len(result) > 0:
                 result += '/'
-            result += equation[i].replace('x', '')
+            if len(equation[i].replace('x', '')) == 0:
+                result += '1'
+            else:
+                result += equation[i].replace('x', '')
             addedB = True
     
     if addedB == False:
