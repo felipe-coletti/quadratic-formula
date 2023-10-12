@@ -10,7 +10,7 @@ def getValues(equation):
         if equation[i] == ' ':
             equation = equation.replace(equation[i], '/')
     
-    while '//' in information:
+    while '//' in equation:
         equation = equation.replace('//', '/')
     
     equation = equation.split('/')
