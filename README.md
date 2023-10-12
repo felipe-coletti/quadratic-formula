@@ -1,1 +1,1 @@
-# bhaskara
+# quadratic formula
