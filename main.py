@@ -90,7 +90,7 @@ def findSolution(a, b, c):
     
         print('\nx = {:.2f}'.format(x1))
         print('x = {:.2f}'.format(x2))
-    elif discriminant = 0:
+    elif discriminant == 0:
         if b < 0:
             print('\n{} / 2 . {}'.format(b * -1, a))
         else:
