@@ -1,7 +1,4 @@
-equation = input('Digite uma equação de 2ºgrau: ')
-
-
-def clear(information):
+def getValues(information):
     for i in range(len(information)):
         if not information[i].isnumeric() and information[i] != 'x' and information[i] != '-' and information[i] != ' ':
             information = information.replace(information[i], '/')
@@ -63,16 +60,8 @@ def clear(information):
     return result
 
 
-numbers = clear(equation)
-
-a = int(numbers[0])
-b = int(numbers[1])
-c = int(numbers[2])
-
-if a == 0:
-    print('Equação inválida.')
-else:
-    if len(numbers) < 3 or b == 0 or c == 0:
+def calculateBhaskara(a, b, c):
+    if b == 0 or c == 0:
         print('A equação é incompleta.')
     
     delta = b**2 - 4 * a * c
@@ -104,3 +93,17 @@ else:
         print('x2 = {:.0f}'.format(x2))
     else:
         print('\nEssa equação não apresenta raízes reais.')
+
+
+equation = input('Digite uma equação de 2ºgrau: ')
+
+values = getValues(equation)
+
+a = int(values[0])
+b = int(values[1])
+c = int(values[2])
+
+if a == 0:
+    print('Equação inválida.')
+else:
+    calculateBhaskara(a, b, c)
