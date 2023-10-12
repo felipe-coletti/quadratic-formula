@@ -66,8 +66,8 @@ def findSolution(a, b, c):
     
     discriminant = b**2 - 4 * a * c
     
-    x = (-b + (discriminant**(1/2))) / (2 * a)
-    x = (-b - (discriminant**(1/2))) / (2 * a)
+    x1 = (-b + (discriminant**(1/2))) / (2 * a)
+    x2 = (-b - (discriminant**(1/2))) / (2 * a)
     
     print('{}² - 4 . {} . {}'.format(b, a, c))
     
