@@ -1,5 +1,8 @@
 def getValues(equation):
     for i in range(len(equation)):
+        if i > 0 and equation[i] == '-' and equation[i - 1] != ' ':
+            equation = equation.replace(equation[i], ' -')
+        
         if not equation[i].isnumeric() and equation[i] != 'x' and equation[i] != '-' and equation[i] != ' ':
             equation = equation.replace(equation[i], '/')
     
