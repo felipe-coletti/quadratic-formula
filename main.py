@@ -64,10 +64,10 @@ def findSolution(a, b, c):
     if b == 0 or c == 0:
         print('A equação é incompleta.')
     
-    delta = b**2 - 4 * a * c
+    discriminant = b**2 - 4 * a * c
     
-    x = (-b + (delta**(1/2))) / (2 * a)
-    x = (-b - (delta**(1/2))) / (2 * a)
+    x = (-b + (discriminant**(1/2))) / (2 * a)
+    x = (-b - (discriminant**(1/2))) / (2 * a)
     
     print('{}² - 4 . {} . {}'.format(b, a, c))
     
@@ -80,17 +80,17 @@ def findSolution(a, b, c):
     else:
         print('{} + {}'.format(firstPart, secondPart))
     
-    print(delta)
+    print(discriminant)
     
-    if delta > 0:
+    if discriminant > 0:
         if b < 0:
             b *= -1
-            print('\n{} ± √{} / 2 . {}'.format(b, delta, a))
+            print('\n{} ± √{} / 2 . {}'.format(b, discriminant, a))
         else:
-            print('\n-{} ± √{} / 2 . {}'.format(b, delta, a))
+            print('\n-{} ± √{} / 2 . {}'.format(b, discriminant, a))
     
-        print('\nx1 = {:.2f}'.format(x1))
-        print('x2 = {:.2f}'.format(x2))
+        print('\nx = {:.2f}'.format(x1))
+        print('x = {:.2f}'.format(x2))
     else:
         print('\nEssa equação não apresenta raízes reais.')
 
