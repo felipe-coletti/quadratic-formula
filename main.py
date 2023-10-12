@@ -60,7 +60,7 @@ def getValues(equation):
     return result
 
 
-def calculateX(a, b, c):
+def findSolution(a, b, c):
     if b == 0 or c == 0:
         print('A equação é incompleta.')
     
@@ -106,4 +106,4 @@ c = int(values[2])
 if a == 0:
     print('Equação inválida.')
 else:
-    calculateX(a, b, c)
+    findSolution(a, b, c)
