@@ -5,11 +5,14 @@ def clear(information):
     for i in range(len(information)):
         if not information[i].isnumeric() and information[i] != 'x' and information[i] != '-' and information[i] != ' ':
             information = information.replace(information[i], '/')
+    
     while '- ' in information:
         information = information.replace('- ', '-')
+    
     for i in range(len(information)):
         if information[i] == ' ':
             information = information.replace(information[i], '/')
+    
     while '//' in information:
         information = information.replace('//', '/')
     
@@ -25,6 +28,7 @@ def clear(information):
                 result += '/'
             result += information[i].replace('x²', '')
             addedA = True
+    
     if addedA == False:
         if len(result) > 0:
             result += '/'
@@ -36,6 +40,7 @@ def clear(information):
                 result += '/'
             result += information[i].replace('x', '')
             addedB = True
+    
     if addedB == False:
         if len(result) > 0:
             result += '/'
@@ -47,6 +52,7 @@ def clear(information):
                 result += '/'
             result += information[i]
             addedC = True
+    
     if addedC == False:
         if len(result) > 0:
             result += '/'
