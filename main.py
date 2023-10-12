@@ -81,8 +81,7 @@ def findSolution(a, b, c):
     secondPart = - 4 * a * c
     
     if secondPart < 0:
-        secondPart *= -1
-        print('{} - {}'.format(firstPart, secondPart))
+        print('{} - {}'.format(firstPart, secondPart * -1))
     else:
         print('{} + {}'.format(firstPart, secondPart))
     
