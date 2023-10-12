@@ -89,8 +89,8 @@ def findSolution(a, b, c):
         else:
             print('\n-{} ± √{} / 2 . {}'.format(b, delta, a))
     
-        print('\nx1 = {:.0f}'.format(x1))
-        print('x2 = {:.0f}'.format(x2))
+        print('\nx1 = {:.2f}'.format(x1))
+        print('x2 = {:.2f}'.format(x2))
     else:
         print('\nEssa equação não apresenta raízes reais.')
 
