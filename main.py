@@ -1,29 +1,29 @@
-def getValues(information):
-    for i in range(len(information)):
-        if not information[i].isnumeric() and information[i] != 'x' and information[i] != '-' and information[i] != ' ':
-            information = information.replace(information[i], '/')
+def getValues(equation):
+    for i in range(len(equation)):
+        if not equation[i].isnumeric() and equation[i] != 'x' and equation[i] != '-' and equation[i] != ' ':
+            equation = equation.replace(equation[i], '/')
     
-    while '- ' in information:
-        information = information.replace('- ', '-')
+    while '- ' in equation:
+        equation = equation.replace('- ', '-')
     
-    for i in range(len(information)):
-        if information[i] == ' ':
-            information = information.replace(information[i], '/')
+    for i in range(len(equation)):
+        if equation[i] == ' ':
+            equation = equation.replace(equation[i], '/')
     
     while '//' in information:
-        information = information.replace('//', '/')
+        equation = equation.replace('//', '/')
     
-    information = information.split('/')
+    equation = equation.split('/')
     
     result = ''
     
     addedA = addedB = addedC = False
     
-    for i in range(len(information)):
-        if 'x²' in information[i]:
+    for i in range(len(equation)):
+        if 'x²' in equation[i]:
             if len(result) > 0:
                 result += '/'
-            result += information[i].replace('x²', '')
+            result += equation[i].replace('x²', '')
             addedA = True
     
     if addedA == False:
@@ -31,11 +31,11 @@ def getValues(information):
             result += '/'
         result += '0'
     
-    for i in range(len(information)):
-        if 'x' in information[i] and not '²' in information[i]:
+    for i in range(len(equation)):
+        if 'x' in equation[i] and not '²' in equation[i]:
             if len(result) > 0:
                 result += '/'
-            result += information[i].replace('x', '')
+            result += equation[i].replace('x', '')
             addedB = True
     
     if addedB == False:
@@ -43,11 +43,11 @@ def getValues(information):
             result += '/'
         result += '0'
     
-    for i in range(len(information)):
-        if not 'x' in information[i]:
+    for i in range(len(equation)):
+        if not 'x' in equation[i]:
             if len(result) > 0:
                 result += '/'
-            result += information[i]
+            result += equation[i]
             addedC = True
     
     if addedC == False:
@@ -60,7 +60,7 @@ def getValues(information):
     return result
 
 
-def calculateBhaskara(a, b, c):
+def calculateX(a, b, c):
     if b == 0 or c == 0:
         print('A equação é incompleta.')
     
@@ -95,9 +95,9 @@ def calculateBhaskara(a, b, c):
         print('\nEssa equação não apresenta raízes reais.')
 
 
-equation = input('Digite uma equação de 2ºgrau: ')
+quadraticEquation = input('Digite uma equação de 2ºgrau: ')
 
-values = getValues(equation)
+values = getValues(quadraticEquation)
 
 a = int(values[0])
 b = int(values[1])
@@ -106,4 +106,4 @@ c = int(values[2])
 if a == 0:
     print('Equação inválida.')
 else:
-    calculateBhaskara(a, b, c)
+    calculateX(a, b, c)
