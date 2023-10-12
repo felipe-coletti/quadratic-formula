@@ -66,9 +66,6 @@ def findSolution(a, b, c):
     
     discriminant = b**2 - 4 * a * c
     
-    x1 = (-b + (discriminant**(1/2))) / (2 * a)
-    x2 = (-b - (discriminant**(1/2))) / (2 * a)
-    
     print('{}² - 4 . {} . {}'.format(b, a, c))
     
     firstPart = b**2
@@ -84,13 +81,24 @@ def findSolution(a, b, c):
     
     if discriminant > 0:
         if b < 0:
-            b *= -1
-            print('\n{} ± √{} / 2 . {}'.format(b, discriminant, a))
+            print('\n{} ± √{} / 2 . {}'.format(b * -1, discriminant, a))
         else:
             print('\n-{} ± √{} / 2 . {}'.format(b, discriminant, a))
+        
+        x1 = (-b + (discriminant**(1/2))) / (2 * a)
+        x2 = (-b - (discriminant**(1/2))) / (2 * a)
     
         print('\nx = {:.2f}'.format(x1))
         print('x = {:.2f}'.format(x2))
+    elif discriminant = 0:
+        if b < 0:
+            print('\n{} / 2 . {}'.format(b * -1, a))
+        else:
+            print('\n-{} / 2 . {}'.format(b, a))
+        
+        x = -b / (2 * a)
+        
+        print('\nx = {:.2f}'.format(x))
     else:
         print('\nEssa equação não apresenta raízes reais.')
 
